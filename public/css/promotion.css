@@ -1,0 +1,8 @@
+#promotion header{
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    height: 80px;
+}
+#promotion header .content-right{
+    font-size: .8em;
+}

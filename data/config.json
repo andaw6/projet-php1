@@ -1,0 +1,30 @@
+{
+    "presence": {
+        "items": 10,
+        "pages": 0,
+        "filter": {
+            "status": "present",
+            "ref": "DATA"
+        }
+    },
+    "apprenant": {
+        "items": 10,
+        "pages": 0,
+        "filter": []
+    },
+    "referentiel": {
+        "items": 10,
+        "pages": 0,
+        "filter": []
+    },
+    "visiteur": {
+        "items": 10,
+        "pages": 0,
+        "filter": []
+    },
+    "evenement": {
+        "items": 10,
+        "pages": 0,
+        "filter": []
+    }
+}

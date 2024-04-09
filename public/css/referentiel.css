@@ -1,0 +1,151 @@
+#referentiel header{
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    height: 80px;
+}
+#referentiel header .content-right{
+    font-size: .8em;
+}
+
+
+#section-referentiel{
+    width: 100%;
+    min-height: 200px;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+    margin-right: 0;
+    justify-content: space-between;
+    gap: 0;
+}
+#referentiel .content-ref{
+    width: calc(100% - 340px);
+    min-height: 450px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#referentiel .box{
+    width: 285px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+#referentiel .add-ref{
+    justify-content: flex-end;
+    width: 350px;
+
+}
+#referentiel .add-ref .box{ 
+    width: 95%;
+}
+#referentiel .box .head{
+    height: 30px;
+    align-items: end;
+    display: flex;
+    padding-left: 20px;
+}
+#referentiel .box .head .icon{ width: 20px; }
+#referentiel .box .icon i{ font-size: 1.4em; }
+#referentiel .box .head-content{
+    height: calc(100% - 30px);
+    border-radius: inherit;
+    align-items: center;
+    justify-content: center;
+}
+#referentiel .box .head img{
+    height: 100%;
+    object-fit: cover;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#referentiel .box .head .icon{
+    cursor: pointer;
+}
+#referentiel .box .head-content>div{ flex: 1; }
+#referentiel .box .head-content .box-img{
+    height: 80%;
+    width: 90%;
+    margin-top: 10%;
+}
+#referentiel .box .head-content .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#referentiel .box .head-content .info{
+    padding-top: 15px;
+    gap: 15px;
+    align-items: center;
+}
+#referentiel .box .head-content .info div{
+    font-weight: 600;
+}
+#referentiel .box .head-content .info .status{
+    color: var(--green);
+}
+#referentiel .add-ref .head{
+    height: 50px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#referentiel .add-ref  .head-content{
+    height: 230px;
+    gap: 10px;
+    padding: 0 20px;
+}
+#referentiel .add-ref  .head-content label,
+#referentiel .add-ref  .head-content>div{
+    width: 100%;
+}
+#referentiel .add-ref .group label{
+    margin-bottom: 5px;
+}
+#referentiel .add-ref  .head-content .saisie{
+    position: relative;
+    min-height: 40px;
+
+}
+#referentiel .add-ref  .head-content .saisie input,
+#referentiel .add-ref  .head-content .saisie textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    outline: 0;
+    border: 2px solid var(--grey);
+    padding-left: 30px;
+    font-size: 1em;
+}
+#referentiel .add-ref  .head-content .saisie input::placeholder,
+#referentiel .add-ref  .head-content .saisie textarea::placeholder{
+    font-size: 1.1em;
+    font-family: monospace;
+    font-style: normal;
+    color: var(--grey);
+}
+#referentiel .add-ref .head-content .saisie textarea::placeholder{
+    position: absolute;
+    top: 25%;
+}
+#referentiel .add-ref .head-content .box-icon{
+    position: absolute;
+    font-size: 1.5em;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 5px;
+    color: var(--grey);
+    z-index: 1;
+}
+#referentiel .add-ref .head-content button{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--teal);
+    color: white;
+    font-weight: 700;
+}
