@@ -26,9 +26,6 @@ if(isset($uri)){
         // On inclut le controller global
         include ROOT."/app/controllers/controller.php";
 
-        // Inclusion du model
-        include_once ROOT."/app/models/$page_name.php";
-        
         // On inclut le controlleur corresponand au page donné
         include ROOT."/app/controllers/$page_name.php";
 

@@ -16,7 +16,7 @@
         "genre": "F"
     },
     {
-        "image": "image.png",
+        "image": "image1.jpeg",
         "prenom": "Gory",
         "nom": "Sow",
         "email": "Gorysow20@gmail.com",
@@ -24,7 +24,7 @@
         "genre": "F"
     },
     {
-        "image": "image.png",
+        "image": "image2.jpeg",
         "prenom": "Ibra Deguene",
         "nom": "Dieng",
         "email": "diengdeguene87@gmail.com",
@@ -32,7 +32,7 @@
         "genre": "M"
     },
     {
-        "image": "image.png",
+        "image": "image8.jpeg",
         "prenom": "Khadidiatou",
         "nom": "Diallo",
         "email": "dkhadidiatou75@gmail.com",
@@ -293,7 +293,7 @@
         "prenom": "Oumar",
         "email": "syoumar505@gmail.com",
         "telephone": "781807229",
-        "image": "10:10",
+        "image": "image5.jpeg",
         "genre": "M"
     },
     {
@@ -301,7 +301,7 @@
         "prenom": "Astou Fall",
         "email": "asfallkane@gmail.com",
         "telephone": "773593471",
-        "image": "image.png",
+        "image": "image3.jpeg",
         "genre": "F"
     },
     {
@@ -413,7 +413,7 @@
         "prenom": "Màme Mamy Ngoné",
         "email": "ngonemami@gmail.com",
         "telephone": "778732128",
-        "image": "08:45",
+        "image": "image.png",
         "genre": "F"
     },
     {

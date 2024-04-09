@@ -44,15 +44,7 @@
         <table class="flex-col">
        
            <?php if(isset($datas) == false || $lenght_data == 0):?>
-            <tr>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"></span></td>
-                <td><span class="head"></span><span class="content"><span></span></span></td>
-            </tr>
+                <h2 style='text-align:center; margin-top:2em;'>Aucun présence n'a été trouver</h2>
             <?php 
                 else:
                     foreach($datas as $data):
@@ -71,10 +63,15 @@
             endif;
             ?>
                     
-            </table>
-
+                </table>
+                
+                
         <!-- Le code pour la pagination -->
-        <?php include_once PATH_FILE."/layouts/pagination.html.php"?>
+        <?php 
+            if(sizeof($datas) != 0){
+                include_once PATH_FILE."/layouts/pagination.html.php";
+            }
+        ?>
 
         
     </div>

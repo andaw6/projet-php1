@@ -37,7 +37,7 @@
             
         </div>
         <div class="add-ref flex">
-            <form class="box">
+            <form class="box" method="post">
                 <div class="head">
                     <span>Nouveau Referentiel</span>
                 </div>
@@ -56,13 +56,10 @@
                         </span>
                         <textarea name="desc" cols="30" placeholder="Entrer le Description"></textarea>
                     </div>
-                    <button>Enregistrer</button>
+                    <button type="submit" name="add-promo" value="true">Enregistrer</button>
                         
                 </div>
             </form>
         </div>
     </div>
-    <!-- Le code pour la pagination -->
-    <?php include_once PATH_FILE."/layouts/pagination.html.php"?>
-    
 </section>  

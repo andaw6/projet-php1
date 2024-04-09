@@ -58,8 +58,6 @@ if($redirection){
 }
 
 
-
-
 // On affiche la view pour les présences 
 include PATH_FILE."/layouts/layout.html.php";
 

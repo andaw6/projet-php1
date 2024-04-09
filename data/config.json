@@ -3,8 +3,8 @@
         "items": 10,
         "pages": 0,
         "filter": {
-            "status": "present",
-            "ref": "DATA"
+            "status": "",
+            "ref": ""
         }
     },
     "apprenant": {

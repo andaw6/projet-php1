@@ -95,40 +95,36 @@
             <table class="flex-col">
 
                 <?php if (isset($datas) == false || $lenght_data == 0) : ?>
+                    <h2 style='text-align:center; margin-top:2em;'>Aucun apprenant n'a été trouver</h2>
+                <?php else : foreach ($datas as $data) : ?>
                     <tr>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"></span></td>
-                        <td><span class="head"></span><span class="content"><span></span></span></td>
+                        <td>
+                            <span class="head"></span>
+                            <span class="content flex-cc">
+                                <img src="<?= PATH_IMG ?>/user/<?= $data['image'] ?>" alt="">
+                            </span>
+                        </td>
+                        <td><span class="head"></span><span class="content"><?= $data["nom"] ?></span></td>
+                        <td><span class="head"></span><span class="content"><?= $data["prenom"] ?></span></td>
+                        <td><span class="head"></span><span class="content"><?= $data["email"] ?></span></td>
+                        <td><span class="head"></span><span class="content"><?= $data["genre"] ?></span></td>
+                        <td><span class="head"></span><span class="content"><?= $data["telephone"] ?></span></td>
+                        <td>
+                            <span class="head"></span>
+                            <span class="content">
+                                <a href="?act=1"></a>
+                            </span>
+                        </td>
                     </tr>
-                    <?php else : foreach ($datas as $data) : ?>
-                        <tr>
-                            <td>
-                                <span class="head"></span>
-                                <span class="content flex-cc">
-                                    <img src="<?= PATH_IMG ?>/user/<?= $data['image'] ?>" alt="">
-                                </span>
-                            </td>
-                            <td><span class="head"></span><span class="content"><?= $data["nom"] ?></span></td>
-                            <td><span class="head"></span><span class="content"><?= $data["prenom"] ?></span></td>
-                            <td><span class="head"></span><span class="content"><?= $data["email"] ?></span></td>
-                            <td><span class="head"></span><span class="content"><?= $data["genre"] ?></span></td>
-                            <td><span class="head"></span><span class="content"><?= $data["telephone"] ?></span></td>
-                            <td>
-                                <span class="head"></span>
-                                <span class="content">
-                                    <a href="?act=1"></a>
-                                </span>
-                            </td>
-                        </tr>
                 <?php endforeach; endif; ?>
             </table>
 
-            <!-- La parti pour la pagination -->
-            <?php include_once PATH_FILE . "/layouts/pagination.html.php" ?>
+            <!-- Le code pour la pagination -->
+            <?php 
+                if(sizeof($datas) != 0){
+                    include_once PATH_FILE."/layouts/pagination.html.php";
+                }
+            ?>
         </div>
     </div>
 
