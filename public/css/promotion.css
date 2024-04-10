@@ -1,8 +1,174 @@
 #promotion header{
-    margin-bottom: 2em;
     font-size: 1.2em;
     height: 80px;
 }
 #promotion header .content-right{
     font-size: .8em;
 }
+#promotion #content-promo{
+    width: 100%;
+    min-height: 200px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px 1px #0000001a;
+    padding: 30px;
+    background-color: var(--color-white);
+}
+
+/* Le style pour la liste des promotions */
+#list-promo{
+    width: 100%;
+    box-shadow: 0px 0px 3px 1px #0000001a;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 30px;
+    padding-top: 10px;
+}
+#list-promo header{ 
+    margin-top: 25px;
+    min-height: 50px; 
+    height: 50px;
+}
+#list-promo  header .content-left .nb-promo{
+    color: var(--color-primary);
+}
+#list-promo header>div{
+    min-height: 40px;
+}
+#list-promo header .content-right{
+    width: 30%;
+    min-width: 300px;
+    gap: 10px;
+    height: 45px;
+}
+#list-promo header .content-right .search{
+    height: 100%;
+    min-width: 300px;
+    position: relative;
+}
+#list-promo header .content-right .search input{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--color-grey);
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 1.1em;
+
+    &::placeholder{
+        color: var(--color-dark-grey);
+    }
+}
+#list-promo header .content-right .search .icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+}
+#list-promo header .content-right #btn-add{
+    min-width: 120px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    height: 100%;
+    text-transform: capitalize;
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+
+#promotion table{ 
+    gap: 0; 
+    width: 100%;
+    padding-bottom: 3em;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+#promotion table tr{
+    display: flex;
+    margin-bottom: 4px;
+}
+#promotion table td{
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: wrap;
+    min-height: 40px;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+
+#promotion table td:nth-child(1) .head::after{
+    content: "Libelle";
+}
+#promotion table td:nth-child(2) .head::after{
+    content: "Date Début";
+}
+#promotion table td:nth-child(3) .head::after{
+    content: "Date Fin";
+}
+#promotion table td:nth-child(4) .head::after{
+    content: "Status";
+}
+#promotion table td:nth-child(5) .head::after{
+    content: "Action";
+}
+
+#promotion table td span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+#promotion table td .head{
+    background-color: #b7dfdf33;
+    height: 0px;
+    display: none;
+    border-right: 1px solid;
+}
+#promotion table td .promo-name{
+    font-size: 1.1em;
+    font-weight: 700;
+    color: green;
+}
+#promotion table td:last-child .head{
+    border-right: none; 
+}
+#promotion table td .content{
+    position: relative;
+}
+#promotion table td:nth-last-child(2) .content.active::after{
+    background-color: lime;
+    color: black;
+}
+#promotion table td:nth-last-child(2) .content::after{
+    position: absolute;
+    min-width: 90px;
+    width: 70%;
+    height: 90%;
+    background-color: red;
+    border-radius: 10px;
+    content: attr(data-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: var(--color-white);
+}
+#promotion table td .content .icon{
+    margin-right: 5px;
+    font-size: 2em;
+}
+#promotion table td:last-child .content a{
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: var(--color-grey);
+}
+#promotion table tr:first-child td .head{ display: flex; }
+

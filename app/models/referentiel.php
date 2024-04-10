@@ -1,7 +1,7 @@
 <?php 
 
 function addReferentiel($data){
-    if(isset($data["libelle"]) || isset($data["dec"])){
+    if(isset($data["libelle"]) && isset($data["dec"])){
         $path = PATH_DATA."/referentiel.json";
         $datas = readJsonFile($path);
         $new = [

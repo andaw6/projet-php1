@@ -1,0 +1,38 @@
+[
+    {
+        "libelle":"Promotion 6",
+        "debut": "2024-02-01",
+        "fin":"2024-11-01",
+        "status": "active"
+    },
+    {
+        "libelle":"Promotion 5",
+        "debut": "2023-02-01",
+        "fin":"2023-11-01",
+        "status": "desactive"
+    },
+    {
+        "libelle":"Promotion 4",
+        "debut": "2022-02-01",
+        "fin":"2022-11-01",
+        "status": "desactive"
+    },
+    {
+        "libelle":"Promotion 3",
+        "debut": "2021-02-01",
+        "fin":"2021-11-01",
+        "status": "desactive"
+    },
+    {
+        "libelle":"Promotion 2",
+        "debut": "2020-02-01",
+        "fin":"2020-11-01",
+        "status": "desactive"
+    },
+    {
+        "libelle":"Promotion 1",
+        "debut": "2019-02-01",
+        "fin":"2019-11-01",
+        "status": "desactive"
+    }
+]

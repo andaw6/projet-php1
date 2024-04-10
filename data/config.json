@@ -1,10 +1,10 @@
 {
     "presence": {
-        "items": 10,
+        "items": null,
         "pages": 0,
         "filter": {
             "status": "",
-            "ref": ""
+            "ref": "Dev Web\/Mobile"
         }
     },
     "apprenant": {
