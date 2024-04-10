@@ -96,24 +96,57 @@
                     </div>
                 </div>
                 <!-- Le box qui contient la liste des référentiels -->
-                <div id="list">
+                <div id="list" class="flex">
                     <!-- Le box pour un référentiel -->
                     <div class="box">
-                        <div class="head">
-                            <span class="icon">
-                                <i class='bx bx-dots-horizontal-rounded'></i>
-                            </span>
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
                         </div>
-                        <div class="head-content flex-col">
-                            <div class="info flex">
-                                <span class="bold label">Dev Web/Mobil</span>
-                            </div>
-                            <div class="box-img">
-                                <img src="" alt="">
-                                <!-- <img src="<?= PATH_IMG ?>/ref/<?= $data['image'] ?>" alt=""> -->
-                            </div>
+                        <div class="box-img">
+                            <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
                         </div>
                     </div>
+                    <div class="box">
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
+                        </div>
+                        <div class="box-img">
+                        <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
+                        </div>
+                        <div class="box-img">
+                            <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
+                        </div>
+                        <div class="box-img">
+                            <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
+                        </div>
+                        <div class="box-img">
+                            <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="info flex">
+                            <span class="bold label">Dev Web/Mobil</span>
+                        </div>
+                        <div class="box-img">
+                            <img src="<?= PATH_IMG ?>/ref/image.png" alt="">
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -122,7 +155,7 @@
             <!-- La division pour les genres -->
             <div id="genre" class="flex-col">
                 <!-- l'en-tête de la partie pour les genres -->
-                <div class="header-genre">
+                <div class="header-section">
                     <h3>genre</h3>
                 </div>
                 <!-- La division pour les contenues  -->
@@ -165,9 +198,9 @@
             <!-- La division pour les insertions -->
             <div id="insertion">
                 <!-- L'en-tête de la partie insertion -->
-                <div class="header-insertion">
+                <div class="header-section flex-sbc">
                     <div class="content-left">
-                        <span>Insertion</span>
+                        <h3>Insertion</h3>
                     </div>
                     <div class="content-right">
                         <span class="icon">
@@ -177,6 +210,9 @@
                 </div>
                 <!-- Le contenue de la partie insertions -->
                 <div class="content-insert">
+                    <div class="progresse flex-cc">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-text="0%"></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -113,7 +113,7 @@
 /* Le style pour le contenue principale de le page */
 #list-content{
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     gap: 20px;
 }
 #list-content>div{
@@ -123,16 +123,57 @@
     background-color: var(--color-white);
     border-radius: 10px;
     box-shadow: var(--box-shadow2);
+    height: max-content;
+    padding: 30px;
+    padding-top: 10px;
 }
 #list-content #left .head-promo{
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 #list-content #left .head-promo .content-left{
     font-size: 1.2em;
     font-weight: bold;
 }
+#list-content #left .head-promo .content-right{
+    font-size: 2em;
+}
+#list-content #left #list{
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 17px;
+    margin-top: 5px;
+}
+#list-content #left #list .box{
+    height: 210px;
+    width: 220px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow2);
+    padding: 20px;
+}
+#list-content #left #list .box .info{
+    height: 30px;
+    border-bottom: 1px solid var(--color-grey);
+    font-size: 1.1em;
+    color: green;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+#list-content #left #list .box .box-img{
+    height: calc(100% - 30px);
+    width: 100%;
+    padding-top: 20px;
+}
+#list-content #left #list .box .box-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 #list-content #right{
     padding: 0;
 }
@@ -145,32 +186,31 @@
     box-shadow: var(--box-shadow2);
 }
 
+#list-content #right #insertion,
 #list-content #right #genre{
     margin-bottom: 30px;
     height: 400px;
     padding: 20px;
 }
-
-#list-content #right #genre .header-genre{
+#list-content #right .header-section{
     height: 60px;
     border: none;
-    border-bottom: 2px solid var(--color-grey);
+    border-bottom: 1px solid var(--color-grey);
     text-transform: capitalize;
     font-size: 1.3em;
     margin-bottom: 20px;
 }
+#list-content #right #insertion .content-insert,
 #list-content #right #genre .content-genre{
     height: calc(100% - 80px);
     gap: 10px;
 }
-
 #list-content #right #genre .group {
     flex: 1;
     background-color: #f7f7f7;  
-    /* border: 2px solid var(--color-grey); */
     border-radius: 5px;
 }
-#list-content #right #genre .group .label{
+#list-content #right .header-section .group .label{
     font-size: 1.2em;
     font-weight: 500;
 }
@@ -197,6 +237,7 @@
     align-items: center;
 }
 
+#list-content #right #insetion .progresse .progress-bar,
 #list-content #right #genre .progresse .progress-bar{
     display: flex;
     align-items: center;
@@ -228,3 +269,20 @@
     content: attr(data-text);
     color: #8720c4;
 }
+
+#list-content #right #insertion{
+    margin-bottom: 0;
+}
+#list-content #right #insertion .progresse .progress-bar{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+#list-content #right #insertion .progresse .progress-bar{
+    background: 
+        radial-gradient(closest-side,  var(--color-white) 79%, transparent 80% 100%),
+        conic-gradient(#ED3B82 70%, #6A79F7 0%)
+    ;
+}
+
+/* #F7F7F7  #6A78F7 */
