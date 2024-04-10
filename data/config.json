@@ -1,10 +1,10 @@
 {
     "presence": {
-        "items": null,
+        "items": 10,
         "pages": 0,
         "filter": {
             "status": "",
-            "ref": "Dev Web\/Mobile"
+            "ref": ""
         }
     },
     "apprenant": {
@@ -26,5 +26,13 @@
         "items": 10,
         "pages": 0,
         "filter": []
+    },
+    "promotion": {
+        "items": 10,
+        "pages": 0,
+        "filter": "",
+        "view": "promotion",
+        "active": "p6",
+        "nb-promo": 6
     }
 }

@@ -50,11 +50,7 @@ configuration("presence", $config);
 
 // On redirige la page
 if($redirection){
-    // Construire une nouvelle URL sans la variable
-    $new_page = $_GET["page"];
-    $nouvelle_url = WEB."?page=$new_page";
-    // Rediriger l'utilisateur vers la nouvelle URL
-    header("Location: $nouvelle_url");
+    redirection($PAGE);
 }
 
 

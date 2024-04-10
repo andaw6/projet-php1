@@ -124,5 +124,41 @@ function paginer($actP, $nbI, $lenght){
     ];
 }
 
+function filter($datas, $filter){
+    if ($filter == "") {
+        return $datas;
+    }
+    $result = array();
+    // On vérifie s'il n'a pas donner le nom d'un champs et une valeur
+    $filt = explode("=", $filter);
+
+    // Ici on compare les champs qu'il a donnée
+    if (count($filt) == 2) {
+        foreach($datas as $data){
+            if(strtolower($data[$filt[0]]) == strtolower($filt[1]))
+                $result[] = $data;
+        }
+    }else{
+        foreach($datas as $data){
+            foreach($data as $dt){
+                if(stripos(strtolower($dt), strtolower($filter)) !== false){
+                    $result[] = $data;
+                    break;
+                }
+            }
+        }
+    }
+
+    return $result;
+}
+
+
+// La fonction qui permet de rediriger vers une nouvelle la page
+function redirection($page){
+    // Construction d'une nouvelle URL sans la variable
+    $nouvelle_url = WEB."?page=$page";
+    // Rediriger l'utilisateur vers la nouvelle URL
+    header("Location: $nouvelle_url");
+}
 
 ?>

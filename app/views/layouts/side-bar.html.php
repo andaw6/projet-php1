@@ -18,7 +18,7 @@
             <span class="icon-label">Dashboard</span>
         </a>
 
-        <a href="?page=2" <?php if ($PAGE == 2):?>class="selected" <?php endif; ?>>
+        <a href="?page=2&pg=p1" <?php if ($PAGE == 2):?>class="selected" <?php endif; ?>>
             <span class="icon">
                 <i class='bx bx-spreadsheet'></i>
             </span>
