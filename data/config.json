@@ -33,6 +33,11 @@
         "filter": "",
         "view": "promotion",
         "active": "p6",
-        "nb-promo": 6
+        "nb-promo": 7,
+        "sauve": {
+            "libelle": "",
+            "debut": "",
+            "fin": ""
+        }
     }
 }

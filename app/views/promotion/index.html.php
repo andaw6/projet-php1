@@ -4,9 +4,11 @@
             <span class="bold">Promotions</span>
         </div>
         <div class="content-right">
-            <span class="bold">Promos</span>
-            <span><i class='bx bx-chevron-right'></i></span>
-            <span class="bold">Création</span>
+            <a class="bold" href="?page=<?=$PAGE?>&pg=p1" style="display: inline;">Promos</a>
+            <?php if($view != "promotion"){ ?>
+                <span><i class='bx bx-chevron-right'></i></span>
+                <span class="bold">Création</span>
+            <?php } ?>
         </div>
     </header>
     <div id="content-promo">

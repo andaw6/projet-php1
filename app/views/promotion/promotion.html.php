@@ -2,7 +2,7 @@
     <header class="flex-sbc">
         <div class="content-left flex">
             <span class="text bold">Liste des promotions</span>
-            <span class="nb-promo bold">(1)</span>
+            <span class="nb-promo bold">(<?=$nbPromo?>)</span>
         </div>
         <form class="content-right flex-sbc" method="post" name="filter">
             <div class="search">
@@ -41,14 +41,12 @@
                         </span>
                     </td>
                 </tr>
-        <?php endforeach;
-        endif; ?>
+        <?php endforeach; endif; ?>
     </table>
 
     <!-- Le code pour la pagination -->
     <?php
     if (count($datas) != 0)
         include_once PATH_FILE . "/layouts/pagination.html.php";
-
     ?>
 </div>

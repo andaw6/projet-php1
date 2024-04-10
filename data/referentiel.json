@@ -28,17 +28,5 @@
         "label": "Developpement Data",
         "status": "active",
         "desc": ""
-    },
-    {
-        "status": "active",
-        "image": "image.png",
-        "desc": "",
-        "label": "Gaming"
-    },
-    {
-        "status": "active",
-        "image": "image.png",
-        "desc": "fg",
-        "label": "testsdfg"
     }
 ]

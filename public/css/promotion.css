@@ -14,6 +14,8 @@
     background-color: var(--color-white);
 }
 
+
+
 /* Le style pour la liste des promotions */
 #list-promo{
     width: 100%;
@@ -75,9 +77,6 @@
     font-weight: 700;
     font-size: 16px;
 }
-
-
-
 #promotion table{ 
     gap: 0; 
     width: 100%;
@@ -102,7 +101,6 @@
     padding-bottom: 5px;
 }
 
-
 #promotion table td:nth-child(1) .head::after{
     content: "Libelle";
 }
@@ -118,7 +116,6 @@
 #promotion table td:nth-child(5) .head::after{
     content: "Action";
 }
-
 #promotion table td span{
     display: flex;
     justify-content: center;
@@ -172,3 +169,179 @@
 }
 #promotion table tr:first-child td .head{ display: flex; }
 
+
+
+/* Le style pour la création d'une promotion */
+#promotion .head-promo{
+    width: auto;
+    min-height: 50px;
+    align-items: center;
+}
+#promotion .head-promo .decor{
+    min-height: 45px;
+    min-width: 45px;
+    height: 45px;
+    width: 45px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+#promotion #parti1 .head-promo .decor.second{
+    background-color: #F8F8FF;
+}
+#promotion #parti1 .head-promo .decor.second span{
+    color: var(--color-primary);
+}
+#promotion .head-promo .decor a,
+#promotion .head-promo .decor span{
+    font-size: 1.6em;
+    font-weight: 800;
+    color: white;
+}
+#promotion .head-promo>span{
+    margin-left: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#promotion .content-promo,
+#promotion .content-ref{
+    width: calc(100% - 10px);
+    padding-left: 50px;
+    padding-top: 20px;
+    border-left: 2px solid var(--color-grey);
+    gap: 10px;
+    transform: translateX(24px) translateY(-1px);
+}
+#promotion .content-promo .form,
+#promotion .content-promo form{
+    width: 100%;
+    gap: 20px;
+}
+#promotion #parti2 .content-promo {
+    min-height: 60px;
+}
+#promotion .content-promo .ligne{
+    min-height: 80px;
+    width: 100%;
+}
+#promotion .content-promo .ligne .box{ 
+    flex: 1; 
+    min-height: 80px;
+    position: relative;
+    gap: 10px;
+    width: 100%;
+
+}
+#promotion .content-promo .ligne .saisie{
+    position: relative;
+    min-height: 50px;
+}
+#promotion .content-promo .ligne .saisie input{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--color-grey);
+    position: absolute;
+    font-size: 1em;
+}
+#promotion .content-promo .ligne .saisie input[type="text"]{
+    padding-left: 50px;
+}
+#promotion .content-promo .ligne .saisie input[type="date"]{
+    padding: 0 20px;
+}
+#promotion .content-promo .ligne .saisie input[type="date"]::-webkit-calendar-picker-indicator{
+    font-size: 1.5em;
+}
+#promotion .content-promo .ligne2{
+    gap: 30px;
+}
+#promotion .content-promo .buttons .btn{
+    min-height: 50px;
+    padding: 10px 30px;
+    min-width: 150px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    color: white;
+    border-color: transparent;
+}
+#promotion .content-promo .buttons .btn:first-child{
+    background-color: var(--color-blue);
+}
+#promotion .content-promo .buttons .btn:last-child{
+    background-color: var(--color-primary);
+}
+#promotion .head-promo:last-child .decor span{
+    color: var(--color-primary);
+}
+#promotion .content-ref{
+    border-color: transparent;
+    padding-top: 5px;
+}
+#promotion .content-ref>span{
+    font-size: 1.2em;
+}
+
+#promotion .content-ref ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#promotion .content-ref ul li{
+    list-style: none;
+    padding-left: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+#promotion .content-ref ul li input{
+    width: 20px;
+    height: 20px;
+}
+#promotion .content-ref ul li label{
+    font-size: 1.04em;
+    margin-left: 10px;
+}
+#promotion .content-ref .btns{
+    width: 300px;
+    gap: 10px;
+    min-height: 50px;
+}
+#promotion .content-ref .btns button{
+    padding: 10px 30px;
+    text-transform: capitalize;
+    font-size: 1em;
+    border-radius: 5px;
+    border-color: transparent;
+}
+#promotion .content-ref .btns button a{
+    height: 100%;
+    width: 100%;
+}
+#promotion .content-ref #btn-return,
+#promotion .content-ref #btn-return a{
+    background-color: rgb(242, 240, 240);
+    color: black;
+}
+#promotion .content-ref #btn-create{
+    color: white;
+    background-color: var(--color-primary);
+}
+
+
+@media screen and (max-width:700px) {
+    #promotion #parti1 form .ligne2,
+    #promotion #parti2 form .ligne2{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:600px){
+    #promotion .content-promo .buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #promotion .content-promo .buttons .btn{
+        flex: 1;
+        width: 100%;
+    }
+}
