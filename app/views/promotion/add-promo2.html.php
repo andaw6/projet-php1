@@ -1,8 +1,7 @@
 <div id="parti2">
     <div class="flex head-promo">
         <div class="decor flex-cc">
-             <!-- A modifier tout à l'heure -->
-            <a><i class='bx bxs-edit-alt'></i></a>
+            <a href="?page=<?=$PAGE?>&ap=back"><i class='bx bxs-edit-alt'></i></a>
         </div>
         <span class="bold">Promotion</span>
     </div>

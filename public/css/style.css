@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 :root{
     --color-primary: #029386;
     --color-danger: #FF0060;
@@ -12,9 +14,12 @@
     --color-teal: #01889F;
     --color-blue:#1450AA;
     --color-ghost-white:#F8F8FF;
+    --color-light: rgba(132, 139, 200, 0.18);
+
 
     --box-shadow: 0 2rem 3rem var(--color-light);
     --box-shadow1: 0px 0px 3px 1px #0000001a;
+    --box-shadow2: 0 2rem 3rem var(--color-light);
 }
 *{
     margin: 0;
