@@ -2,26 +2,40 @@
 // Inclusion du model
 include_once ROOT."/app/models/presence.php";
 
+$datas["data"] = getPresence($actualPromo);
+$lenght_data = sizeof($datas["data"]);
+
 
 // On récupére les informations pour la pagination
 $rst = paginer($actualPage, $nbItems, $lenght_data);
 $actualPage = $rst["ap"];
 $redirection = $rst["rd"];
 $nbItems = $rst["nbi"];
+$dateAct = date("Y-m-d");
+
+if(isset($_REQUEST['refraiche'])){
+    $datas["data"] = filterPresence($datas["data"],$_REQUEST);
+    $config["filter"]["status"] = $_REQUEST["status"];
+    $config["filter"]["ref"] = $_REQUEST["ref"];
+    $dt = $dateAct;
+    if(isset($_REQUEST["calendar"])) $dt = $_REQUEST["calendar"];
+    $config["filter"]["date"] = $dt;
+}
 
 
 // Les actions que l'utilisateur peut faire
-if(isset($_POST["action"])){
-    if( $_POST["action"] == "filter"){
-        $filter["status"] = $_POST["status"];
-        $filter["ref"] = $_POST["ref"];
+if(isset($_REQUEST["action"])){
+    if( $_REQUEST["action"] == "filter"){
+        $filter["status"] = $_REQUEST["status"];
+        $filter["ref"] = $_REQUEST["ref"];
         $actualPage = 0;
     }
 }
 
-// On récupére les présences filtrer
-$datas = filterAllPresence($filter);
-$lenght_data = sizeof($datas);
+if(isset($_REQUEST["filter"])){
+    $datas["data"] = filter($datas["data"], $_REQUEST["filter"]);
+    $data_filter = $_REQUEST["filter"];
+}
     
 
 // On récupére l'intervale de l'élément qu'on veut afficher
@@ -32,10 +46,10 @@ if($end>$lenght_data) $end = $lenght_data;
 
 
 // On récupére les éléments a afficher dans une interval donnée
-$datas = getElementByInterval($datas, $start, $end);
+$datas["data"] = array_slice($datas["data"], $start, $end);
 
 // On vérifie s'il y a des éléments dans le tableau pour ajouter 1 à start
-if(sizeof($datas)) $start++;
+if(sizeof($datas["data"])) $start++;
 
 
 // met à jour les données

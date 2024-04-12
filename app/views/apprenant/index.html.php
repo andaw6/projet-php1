@@ -17,11 +17,11 @@
         <div id="header2" class="flex-sbc">
             <div class="first">
                 <span>Promotion:</span>
-                <span class="info">Promotion 6</span>
+                <span class="info"><?=$datas["promo"]["libelle"];?></span>
             </div>
             <div class="second">
                 <span>Référentiel:</span>
-                <span class="info">Dev Web/Mobile</span>
+                <span class="info">A modifier</span>
             </div>
         </div>
     </header>
@@ -40,7 +40,7 @@
             <!-- La parti qui permet de faire des actions sur un apprenant -->
             <div class="header flex-sbc">
                 <div class="content-left flex">
-                    <span>Liste des Apprenants <span class="info">(50)</span></span>
+                    <span>Liste des Apprenants <span class="info">(<?=$nbApprenant?>)</span></span>
                 </div>
                 <div class="content-right flex">
                     <div class="flex">
@@ -72,16 +72,16 @@
             <div class=" search flex-col">
                 <form id="form" method="post" class="flex" name="filter">
                     <div class="content-search">
-                        <input type="text" placeholder="Filter" name="filter">
+                        <input type="hidden" name="filter1" value="true">
+                        <input type="text" placeholder="Filter" name="filter" value="<?=$filter?>">
                         <span class="icon flex-cc">
                             <i class='bx bx-search' ></i>
                         </span>
                     </div>
 
                     <button id="confirm">
-                        <a href="?reset">
+                        <a href="?page=1">
                             <i class='bx bx-reset'></i>
-                            <!-- <i class="fa-sharp fa-solid fa-check"></i> -->
                         </a>
                     </button>
                 </form>
@@ -96,7 +96,7 @@
 
                 <?php if (isset($datas) == false || $lenght_data == 0) : ?>
                     <h2 style='text-align:center; margin-top:2em;'>Aucun apprenant n'a été trouver</h2>
-                <?php else : foreach ($datas as $data) : ?>
+                <?php else : foreach ($datas["data"] as $data) : ?>
                     <tr>
                         <td>
                             <span class="head"></span>
@@ -104,8 +104,8 @@
                                 <img src="<?= PATH_IMG ?>/user/<?= $data['image'] ?>" alt="">
                             </span>
                         </td>
-                        <td><span class="head"></span><span class="content"><?= $data["nom"] ?></span></td>
-                        <td><span class="head"></span><span class="content"><?= $data["prenom"] ?></span></td>
+                        <td><span class="head"></span><span class="content <?=$data["status"]?>"><?=$data["nom"]?></span></td>
+                        <td><span class="head"></span><span class="content <?=$data["status"]?>"><?=$data["prenom"]?></span></td>
                         <td><span class="head"></span><span class="content"><?= $data["email"] ?></span></td>
                         <td><span class="head"></span><span class="content"><?= $data["genre"] ?></span></td>
                         <td><span class="head"></span><span class="content"><?= $data["telephone"] ?></span></td>

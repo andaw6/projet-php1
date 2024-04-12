@@ -552,7 +552,7 @@
         "promo": "p5"
     },
     {
-        "matricule": "P5_DEVDATA_2023_04",
+        "matricule": "P5_DEVDATA_2023_03",
         "prenom": "Ibrahima",
         "nom": "GNINGUE",
         "email": "gningkhalilo49@gmail.com",
@@ -569,7 +569,6 @@
         "nom": "MOUSTOIFA BEN",
         "email": "kamalmoustoifa@gmail.com",
         "genre": "M",
-        "status":"desactive",
         "telephone": "775726004",
         "image": "image.png",
         "ref": "Dev Web\/Mobile",

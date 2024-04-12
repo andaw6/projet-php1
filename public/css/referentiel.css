@@ -81,9 +81,13 @@
 #referentiel .box .head-content .info div{
     font-weight: 600;
 }
-#referentiel .box .head-content .info .status{
-    color: var(--green);
+#referentiel .box .info .status.active{
+    color: green;
 }
+#referentiel .box .info .status.desactive{
+    color: red;
+}
+
 #referentiel .add-ref .head{
     height: 50px;
     font-size: 1.4em;

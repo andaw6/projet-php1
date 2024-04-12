@@ -2,23 +2,20 @@
     "presence": {
         "items": 10,
         "pages": 0,
-        "filter1": "",
         "filter": {
-            "status": "present",
+            "status": "",
             "ref": ""
         }
     },
     "apprenant": {
         "items": 10,
         "pages": 0,
-        "filter1": "",
-        "filter": ""
+        "filter": []
     },
     "referentiel": {
         "items": 10,
         "pages": 0,
-        "filter": "",
-        "filter1": ""
+        "filter": []
     },
     "visiteur": {
         "items": 10,
@@ -35,14 +32,12 @@
         "pages": 0,
         "filter": "",
         "view": "promotion",
-        "nb-promo": 6,
+        "active": "p6",
+        "nb-promo": 10,
         "sauve": {
             "libelle": "",
             "debut": "",
             "fin": ""
         }
-    },
-    "dashboard": {
-        "filter": ""
     }
 }

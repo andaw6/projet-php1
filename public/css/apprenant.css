@@ -68,12 +68,15 @@
 #content-head .header .content-right{
     gap: 10px;
 }
+#content-head .header .content-right>div{
+    gap: 10px;
+}
 #content-head .header .btn{
     height: 50px;
     width: max-content;
     padding: 10px 20px;
     align-items: center;
-    border: 2px solid;
+    border: 2px solid transparent;
     border-radius: 10px;
     color: white;
 }
@@ -254,4 +257,12 @@
     height: 30px;
     width: 30px;
     background-color: #808080;
+}
+#apprenant table td .active{
+    color: green;
+    font-weight: 700;
+}
+#apprenant table td .desactive{
+    color: red;
+    font-weight: 700;
 }

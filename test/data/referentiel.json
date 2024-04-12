@@ -1,0 +1,32 @@
+[
+    {
+        "image": "image.png",
+        "label": "Dev Web\/Mobile",
+        "status": "active",
+        "desc": ""
+    },
+    {
+        "image": "image.png",
+        "label": "Reference Digital",
+        "status": "active",
+        "desc": ""
+    },
+    {
+        "image": "image.png",
+        "label": "Aws",
+        "status": "active",
+        "desc": ""
+    },
+    {
+        "image": "image.png",
+        "label": "Hackeuse",
+        "status": "active",
+        "desc": ""
+    },
+    {
+        "image": "image.png",
+        "label": "Developpement Data",
+        "status": "active",
+        "desc": ""
+    }
+]

@@ -1,16 +1,4 @@
-<?php
-
-// Fonction qui permet de filtrer les pomotions
-function filterPromo($filter){
-    // Le chemin vers le fichier de stokage
-    $path = PATH_DATA."/promotion.json";
-
-    // On récupére la liste des promotions dans le fichier de stokage
-    $promos = readJsonFile($path);
-    
-    // on retourne les données filtrer
-    return filter($promos, $filter);
-}
+<?php 
 
 
 // Fonction qui permet d'ajouter un promotion
@@ -32,7 +20,8 @@ function addPromo($data, $refs=[]){
             "libelle" => $data["libelle"],
             "debut" => $data["debut"],
             "fin" => $data["fin"],
-            "referentiels" => $refs
+            "insert" => 0,
+            "refs" => $refs
         ];
 
         // On vérifie si le promo existe ou pas si vrai on ne l'ajoute pas
@@ -87,4 +76,23 @@ function promoExist($promos, $promo){
 
     // On retourn le resultat
     return $result;
+}
+
+
+function updatePromo($promo){
+    $path = PATH_DATA."/promotion.json";
+    $promos = findAll("promotion");
+    $index = -1;
+    foreach($promos as $k => $v){
+        if($v["id"] == $promo["id"]){
+            $index = $k; break;
+        }
+    }
+
+    if($index != -1){
+        $promos[$index] = $promo;
+        return writeJsonFile($path, $promos);
+    }
+
+    return false; // 
 }

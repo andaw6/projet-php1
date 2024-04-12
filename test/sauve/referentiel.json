@@ -1,0 +1,32 @@
+[
+    {
+        "id":"web",
+        "libelle":"Dev Web\/Mobile",
+        "desc":""
+    },
+    {
+        "id":"data",
+        "libelle":"Dev Data",
+        "desc":""
+    },
+    {
+        "id":"dig",
+        "libelle":"Ref Ditigal",
+        "desc":""
+    },  
+    {
+        "id":"artisant",
+        "libelle":"Data Artisant",
+        "desc":""
+    },
+    {
+        "id":"aws",
+        "libelle":"AWS",
+        "desc":""
+    },
+    {
+        "id":"hackeuse",
+        "libelle":"Hackeuse",
+        "desc":""
+    }
+]

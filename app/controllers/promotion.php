@@ -12,8 +12,9 @@ $reset = ["libelle" => "", "debut" => "", "fin" => ""];
 
 // On s'assure d'avoir le même nombre de nombre dans le fichier de 
 // configuration et dans le fichier de stockage des promotions
-if($config["nb-promo"] != count($datas))
-    $config["nb-promo"] = count($datas);
+if($config["nb-promo"] != count($datas["data"]))
+$config["nb-promo"] = count($datas["data"]);
+
 // On récupére le nombre de promotion
 $nbPromo = $config["nb-promo"];
 
@@ -30,13 +31,19 @@ if(isset($pg)){
     }
 }
 
-// On récupére la requête de filtration
-$filter= $_REQUEST["filter"];
-if(isset($filter)){
-    $datas = filterPromo($filter);
-    $config["filter"] = $filter;
-    $actualPage = 0;
+if(isset($_REQUEST["act"])){
+    $act = $_REQUEST["act"];
+    $promo = filter($datas["data"], "id=$act")[0];
+
+    $datas["promo"]["status"] = "desactive";
+    updatePromo($datas["promo"]);
+    $promo["status"] = "active";
+    // dd($promo);
+    updatePromo($promo);
+
+    redirection($PAGE);
 }
+
 
 // On récupére la requête pour créer un promotion
 $create = $_REQUEST["ap"];
@@ -47,7 +54,7 @@ if(isset($create)){
         case 'creer':
             if(addPromo($_REQUEST)){
                 $config["view"] = $views["p1"];
-                $datas = findAll("promotion");
+                $datas["data"] = findAll("promotion");
                 $config["sauve"] = $reset;
             }
             break;
@@ -63,7 +70,7 @@ if(isset($create)){
             if(addPromo($config["sauve"], getPromoByQuery($_REQUEST))){
                 $config["sauve"] = $reset;
                 $config["view"] = $views["p1"];
-                $datas = findAll("promotion");
+                $datas["data"] = findAll("promotion");
             }
             break;
         // Quand on veut retourner en arrière pour modifier le donnée pour le nouveau promotion
@@ -84,7 +91,7 @@ $nbItems = $rst["nbi"];
 configuration("promotion", $config);
 
 // On récupére le dernier filtre pour l'afficher
-$filter = $config["filter"];
+$date_filter = $config["filter"];
 
 // Quand on veut redirigé la page
 if($redirection){
@@ -93,7 +100,7 @@ if($redirection){
 }
 
 // On récupére la taille du tableau
-$lenght_data = sizeof($datas);
+$lenght_data = sizeof($datas["data"]);
 
 // On récupére l'intervale de l'élément qu'on veut afficher
 $start = $actualPage * $nbItems;
@@ -102,9 +109,9 @@ if($end>$lenght_data) $end = $lenght_data;
 
 
 // On récupére les éléments a afficher dans une interval donnée
-$datas = getElementByInterval($datas, $start, $end);
+$datas["data"] = array_slice($datas["data"], $start, $end);
 // On vérifie s'il y a des éléments dans le tableau pour ajouter 1 à start
-if(sizeof($datas)) $start++;
+if(sizeof($datas["data"])) $start++;
 
 // On recupére la view qu'on veut afficher
 $view = $config["view"];

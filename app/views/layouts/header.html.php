@@ -2,18 +2,18 @@
 <header id="header" class="flex-sbc">
     
     <!-- La parti gauche de l'en-tête -->
-    <div class="content-left flex">
+    <form method="post" class="content-left flex">
         <!-- <input type="checkbox" id="menu-btn"> -->
         <span class="box-icon flex-cc">
             <i class='bx bx-grid-alt'></i>
         </span>
         <div class="box-input flex">
-            <input type="text" name="input-search" class="input" placeholder="Recherche par matricule">
+            <input type="text" name="filter" class="input" placeholder="Recherche par matricule" value="<?=$data_filter?>">
             <span class="box-icon flex-cc">
                 <i class='bx bx-search' ></i>
             </span>
         </div>
-    </div>
+    </form>
 
     <!-- La parti droite de l'en-tête -->
     <div class="content-right flex">

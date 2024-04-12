@@ -5,11 +5,13 @@
         "debut": "2019-02-01",
         "fin": "2019-11-01",
         "status": "desactive",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 100,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "arti": "active"
+        }
     },
     {
         "id": "p2",
@@ -17,11 +19,13 @@
         "debut": "2020-02-01",
         "fin": "2020-11-01",
         "status": "desactive",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 88,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "arti": "active"
+        }
     },
     {
         "id": "p3",
@@ -29,11 +33,13 @@
         "debut": "2021-02-01",
         "fin": "2021-11-01",
         "status": "desactive",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 68,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "arti": "active"
+        }
     },
     {
         "id": "p4",
@@ -41,11 +47,13 @@
         "debut": "2022-02-01",
         "fin": "2022-11-01",
         "status": "desactive",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 70,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "data": "active"
+        }
     },
     {
         "id": "p5",
@@ -53,11 +61,13 @@
         "debut": "2023-02-01",
         "fin": "2023-11-01",
         "status": "desactive",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 90,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "data": "active"
+        }
     },
     {
         "id": "p6",
@@ -65,33 +75,15 @@
         "debut": "2024-02-01",
         "fin": "2024-11-01",
         "status": "active",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "Reference Digital",
-            "Developpement Data",
-            "Hackeuse",
-            "Aws"
-        ]
-    },
-    {
-        "status": "desactive",
-        "id": "p7",
-        "libelle": "Promotion 7",
-        "debut": "2024-04-13",
-        "fin": "2024-04-21",
-        "referentiels": []
-    },
-    {
-        "status": "desactive",
-        "id": "p7",
-        "libelle": "Promotion 8",
-        "debut": "2024-04-13",
-        "fin": "2024-04-27",
-        "referentiels": [
-            "Dev Web\/Mobile",
-            "AWS",
-            "Hackeuse",
-            "Developpement Data"
-        ]
+        "image": "image.png",
+        "insert": 0,
+        "refs": {
+            "web": "active",
+            "dig": "active",
+            "data": "active",
+            "aws": "active",
+            "hack": "active",
+            "Gam": "desactive"
+        }
     }
 ]

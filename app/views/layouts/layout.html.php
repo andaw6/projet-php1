@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <?php if(isset($_REQUEST["bg"]) && $_REQUEST["bg"]=="black"): ?>
+        <style>
+            :root{
+                --color-background: #181a1e;
+                --color-white: #202528;
+                --color-dark: #edeffd;
+                --color-dark-variant: #a3bdcc;
+                --color-light: rgba(0, 0, 0, 0.4);
+                --box-shadow: 0 2rem 3rem var(--color-light);
+            }
+        </style>
+    <?php endif; ?>
 </head>
 <body>
     <!-- Le conteneur principal qui contient tout la page -->

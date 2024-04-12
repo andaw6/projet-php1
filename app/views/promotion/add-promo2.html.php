@@ -19,23 +19,23 @@
             <span>Selectioner un ou plusieurs référentiel(s)</span>
             <ul>
                 <li>
-                    <input type="checkbox" name="ref-web" value="Dev Web/Mobile">
+                    <input type="checkbox" name="ref-web" value="web">
                     <label for="ref-web">Dev Web/Mobile</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="ref-dig" value="Referentiel Digital">
+                    <input type="checkbox" name="ref-dig" value="dig">
                     <label for="ref-dig">Referentiel Digital</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="ref-aws" value="AWS">
+                    <input type="checkbox" name="ref-aws" value="aws">
                     <label for="ref-aws">AWS</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="ref-hac" value="Hackeuse">
+                    <input type="checkbox" name="ref-hac" value="hack">
                     <label for="ref-hac">Hackeuse</label>
                 </li>
                 <li>
-                    <input type="checkbox" name="ref-data" value="Developpement Data">
+                    <input type="checkbox" name="ref-data" value="data">
                     <label for="ref-data">Developpement Data</label>
                 </li>
             </ul>

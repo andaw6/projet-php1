@@ -18,8 +18,8 @@
 #sect-main #promo-info{
     width: 100%;
     display: grid;
-    grid-template-columns: 2.2fr 1fr 1.2fr 1.3fr;
-    gap: 50px;
+    grid-template-columns: 2.2fr 1fr 1.2fr 1.25fr;
+    gap: 40px;
     max-height: 160px;
     margin-bottom: 20px;
 }
@@ -146,7 +146,7 @@
     margin-top: 5px;
 }
 #list-content #left #list .box{
-    height: 210px;
+    height: 220px;
     width: 220px;
     border-radius: 8px;
     background-color: var(--color-white);
@@ -280,9 +280,9 @@
 }
 #list-content #right #insertion .progresse .progress-bar{
     background: 
-        radial-gradient(closest-side,  var(--color-white) 79%, transparent 80% 100%),
+        radial-gradient(closest-side,  var(--color-white) 70%, transparent 60% 100%),
         conic-gradient(#ED3B82 70%, #6A79F7 0%)
     ;
 }
 
-/* #F7F7F7  #6A78F7 */
+

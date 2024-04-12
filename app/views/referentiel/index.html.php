@@ -12,7 +12,8 @@
 
     <div id="section-referentiel" class="flex">
         <div class="content-ref flex">
-            <?php foreach($datas as $data): ?>
+            <?php foreach($datas["data"] as $data): ?>
+                <?php $status = $datas["promo"]["refs"][$data["id"]];?>
                 <div class="box">
                     <div class="head">
                         <span class="icon">
@@ -25,10 +26,10 @@
                         </div>
                         <div class="info  flex-col">
                             <div class="info-name">
-                                <?=$data["label"]?>
+                                <?=$data["libelle"]?>
                             </div>
-                            <div class="status">
-                                <?=$data["status"]?>
+                            <div class="status <?=$status?>">
+                                <?=$status?>
                             </div>
                         </div>
                     </div>

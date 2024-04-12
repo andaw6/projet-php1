@@ -144,16 +144,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
 
 }
-#presence table td:nth-last-child(2) .content,
+/* #presence table td:nth-last-child(2) .content,
 #presence table td:nth-child(1) .content{
     color: #008000;
-}
-#presence table td:nth-last-child(2) .content.retard{
+} */
+#presence table td .content.oui{
     color: #ff0000;
 }
+#presence table td .content.non{
+    color: #008000;
+}
+
 #presence table td .content.present span{
     color: rgb(18, 72, 72);
-    
+
     background-color: #b7dfdf33;
 }
 #presence table td .content.absent span{

@@ -2,7 +2,7 @@
     <header class="flex-sbc">
         <div class="content-left flex">
             <span class="text bold">Liste des promotions</span>
-            <span class="nb-promo bold">(<?=$nbPromo?>)</span>
+            <span class="nb-promo bold">(<?=count($datas["data"])?>)</span>
         </div>
         <form class="content-right flex-sbc" method="post" name="filter">
             <div class="search">
@@ -18,9 +18,9 @@
     </header>
     <!-- La partie ou on doit afficher la liste des apprenant -->
     <table class="flex-col">
-        <?php if (isset($datas) == false || $lenght_data == 0) : ?>
+        <?php if (isset($datas["data"]) == false || $lenght_data == 0) : ?>
             <h2 style='text-align:center; margin-top:2em;'>Aucun promotion n'a été trouver</h2>
-            <?php else : foreach ($datas as $data) : ?>
+            <?php else : foreach ($datas["data"] as $data) : ?>
                 <tr>
                     <td>
                         <span class="head"></span>
@@ -37,7 +37,7 @@
                     <td>
                         <span class="head"></span>
                         <span class="content">
-                            <a href="?page=<?=$PAGE?>"></a>
+                            <a href="?page=<?=$PAGE?>&act=<?=$data["id"]?>"></a>
                         </span>
                     </td>
                 </tr>
@@ -46,7 +46,7 @@
 
     <!-- Le code pour la pagination -->
     <?php
-    if (count($datas) != 0)
+    if (count($datas["data"]) != 0)
         include_once PATH_FILE . "/layouts/pagination.html.php";
     ?>
 </div>

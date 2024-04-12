@@ -1,0 +1,117 @@
+[
+    {
+        "id": "p1",
+        "libelle": "Promotion 1",
+        "debut": "2019-02-01",
+        "fin": "2019-11-01",
+        "status": "desactive",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data"
+        ]
+    },
+    {
+        "id": "p2",
+        "libelle": "Promotion 2",
+        "debut": "2020-02-01",
+        "fin": "2020-11-01",
+        "status": "desactive",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data"
+        ]
+    },
+    {
+        "id": "p3",
+        "libelle": "Promotion 3",
+        "debut": "2021-02-01",
+        "fin": "2021-11-01",
+        "status": "desactive",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data"
+        ]
+    },
+    {
+        "id": "p4",
+        "libelle": "Promotion 4",
+        "debut": "2022-02-01",
+        "fin": "2022-11-01",
+        "status": "desactive",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data"
+        ]
+    },
+    {
+        "id": "p5",
+        "libelle": "Promotion 5",
+        "debut": "2023-02-01",
+        "fin": "2023-11-01",
+        "status": "desactive",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data"
+        ]
+    },
+    {
+        "id": "p6",
+        "libelle": "Promotion 6",
+        "debut": "2024-02-01",
+        "fin": "2024-11-01",
+        "status": "active",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "Reference Digital",
+            "Developpement Data",
+            "Hackeuse",
+            "Aws"
+        ]
+    },
+    {
+        "status": "desactive",
+        "id": "p7",
+        "libelle": "Promotion 7",
+        "debut": "2024-04-13",
+        "fin": "2024-04-21",
+        "referentiels": []
+    },
+    {
+        "status": "desactive",
+        "id": "p7",
+        "libelle": "Promotion 8",
+        "debut": "2024-04-13",
+        "fin": "2024-04-27",
+        "referentiels": [
+            "Dev Web\/Mobile",
+            "AWS",
+            "Hackeuse",
+            "Developpement Data"
+        ]
+    },
+    {
+        "status": "desactive",
+        "id": "p7",
+        "libelle": "Promotion 9",
+        "debut": "2024-04-14",
+        "fin": "2024-04-07",
+        "referentiels": []
+    },
+    {
+        "status": "desactive",
+        "id": "p6",
+        "libelle": "Promotion 10",
+        "debut": "2024-04-07",
+        "fin": "2024-04-20",
+        "referentiels": [
+            "Referentiel Digital",
+            "AWS",
+            "Hackeuse"
+        ]
+    }
+]

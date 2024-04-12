@@ -1,0 +1,108 @@
+Diagramme de classes UML pour la gestion d'une école
+Classes:
+
+Promotion
+    Attributs:
+        id
+        nom
+        actif (booléen)
+        Méthodes:
+        activer()
+        désactiver()
+Référentiel
+    Attributs:
+        id
+        nom
+        promotion_id (clé étrangère)
+    Méthodes:
+        ajouter_apprenant(apprenant)
+        supprimer_apprenant(apprenant)
+Apprenant
+    Attributs:
+        id
+        nom
+        prénom
+        date_naissance
+        exclu (booléen)
+    Méthodes:
+        exclure()
+        réintégrer()
+Présence
+    Attributs:
+        id
+        date
+        apprenant_id (clé étrangère)
+        référentiel_id (clé étrangère)
+Relations:
+
+Promotion a plusieurs Référentiels (1:N)
+Référentiel a plusieurs Apprenants (N:N)
+Apprenant a plusieurs Présences (N:N)
+Présence appartient à un Référentiel (1:N)
+Présence appartient à un Apprenant (1:N)
+Contraintes:
+
+Une promotion ne peut être active qu'si elle a au moins un référentiel actif.
+Un apprenant ne peut être présent dans un référentiel que si la promotion associée est active.
+Un apprenant ne peut être présent qu'une seule fois par date dans un référentiel.
+Diagramme:
+
++----------------+
+| Promotion       |
++----------------+
+| id              |
+| nom             |
+| actif           |
+|-----------------|
+| +activer()      |
+| +désactiver()   |
++----------------+
+
++---------------------+
+| Référentiel         |
++---------------------+
+| id                  |
+| nom                 |
+| promotion_id        |
+|---------------------|
+| +ajouter_apprenant() |
+| +supprimer_apprenant() |
++---------------------+
+
++-----------------+
+| Apprenant        |
++-----------------+
+| id              |
+| nom             |
+| prénom           |
+| date_naissance   |
+| exclu            |
+|-----------------|
+| +exclure()       |
+| +réintégrer()    |
++-----------------+
+
++----------------+
+| Présence        |
++----------------+
+| id              |
+| date             |
+| apprenant_id     |
+| référentiel_id   |
++----------------+
+
+**Promotion** ----(1:N)---- **Référentiel**
+**Référentiel** ----(N:N)---- **Apprenant**
+**Apprenant** ----(N:N)---- **Présence**
+**Présence** ----(1:N)---- **Référentiel**
+**Présence** ----(1:N)---- **Apprenant**
+Notes:
+
+Ce diagramme est un exemple simplifié et peut être adapté en fonction des besoins spécifiques de l'école.
+Les noms des classes et des attributs peuvent être modifiés pour plus de clarté.
+Des relations supplémentaires peuvent être ajoutées pour représenter des fonctionnalités plus complexes.
+Outils:
+
+Il existe de nombreux outils disponibles pour créer des diagrammes UML, tels que Visual Paradigm, StarUML et PlantUML.
+J'espère que ce diagramme vous sera utile pour la gestion de votre école.
+
